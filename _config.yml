@@ -1,6 +1,6 @@
 # Site
-#repository: lvenier/lvenier.github.io
-#favicon: images/favicon.ico
+repository: lvenier/lvenier.github.io
+favicon: images/favicon.ico
 
 # Personal info
 name: Laurent Venier
@@ -8,7 +8,7 @@ title: IT Manager
 current: New York, USA
 email: lav@yoctu.com
 website: https://yoctu.com
-phone: +352691482900
+#phone: +352691482900
 
 # Social links
 #twitter_username: lvenier
