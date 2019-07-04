@@ -1,12 +1,14 @@
 # Site
-repository: sproogen/resume-theme
-# favicon: images/favicon.ico
+repository: lvenier/lvenier.github.io
+favicon: images/favicon.ico
 
 # Personal info
 name: Laurent Venier
 title: IT Manager
+current: New York, USA
 email: lav@yoctu.com
 website: https://yoctu.com
+phone: +352691482900
 
 # Social links
 #twitter_username: lvenier
@@ -14,8 +16,8 @@ github_username:  lvenier
 # dribbble_username: jekyll
 # facebook_username: jekyll
 # flickr_username: jekyll
-#instagram_username: lvenier
-#linkedin_username: lvenier
+# instagram_username: lvenier
+# linkedin_username: lvenier
 # pinterest_username: jekyll
 youtube_username: lvenier
 googleplus_username: +lvenier
@@ -28,17 +30,6 @@ about_content: |
 
   I am most skilled in: <mark>Work</mark> and <mark>Sports</mark>
 
-# Projects Section
-# projects_title: Projects
-
-# Experience Section
-# experience_title: Experience
-
-# Education Section
-# educaton_title: Education
-
-# More Section
-# more_title: A Little More About Me
 more_content: | # this will include new lines to allow paragraphs
   Alongside my interests in IT some of my other interests and hobbies are:
    - Familly :)
@@ -47,9 +38,6 @@ more_content: | # this will include new lines to allow paragraphs
 
 # Footer
 footer_show_references: true
-
-# Build settings
-#remote_theme: sproogen/resume-theme
 
 sass:
   sass_dir: _sass
