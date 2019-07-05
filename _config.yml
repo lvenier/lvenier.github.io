@@ -17,14 +17,13 @@ youtube_username: lvenier
 googleplus_username: +lvenier
 
 # About Section
-# about_title: About Me
 about_profile_image: images/laurent.jpg
 about_content: |
   Welcome, my name's Laurent and I'm a senior IT Manager. As well as managing people, I also have experience administrating systems and making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
 
   I am most skilled in: <mark>Work</mark> and <mark>Sports</mark>
 
-more_content: | # this will include new lines to allow paragraphs
+more_content: | 
   Alongside my interests in IT some of my other interests and hobbies are:
    - Familly :)
    - Gaming
