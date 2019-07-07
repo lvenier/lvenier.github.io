@@ -5,20 +5,17 @@
   Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
   Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
 
-- layout: left
   company: Technology
   description:
   Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
   Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
 
-- layout: left
   company: Personality
   description:
   team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
   patience    :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:
   stuborn     :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
 
-- layout: left
   company: Language
   description:
   French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
