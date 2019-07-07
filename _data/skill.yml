@@ -1,13 +1,13 @@
 - layout: left
   company: Management
-  description: "<p>People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:</p>
-	<p>Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:</p>
-	<p>Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:</p>"
+  description: "<p>People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>
+	<p>Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br></p>
+	<p>Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>"
 
 - layout: left
   company: Technology
-  description: "<p>Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:</p>
-	<p>Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:</p>"
+  description: "<p>Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>
+	<p>Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br></p>"
 
 - layout: left
   company: Personality
