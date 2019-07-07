@@ -6,18 +6,18 @@
   Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
 
   company: Technology
-  description:
+  description: |
   Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
   Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
 
   company: Personality
-  description:
+  description: |
   team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
   patience    :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:
   stuborn     :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
 
   company: Language
-  description:
+  description: |
   French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
   English  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
   German   :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:
