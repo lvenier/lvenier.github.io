@@ -6,17 +6,17 @@
 
 - layout: left
   company: Technology
-  description: "<p>Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>
-	<p>Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br></p>"
+  description: '<p>Dev <span style="float:right">:black_circle: :black_circle: :black_circle: :white_circle: :white_circle: </span><br></p>
+	<p>Infra <span style="float:right">:black_circle: :black_circle: :black_circle: :black_circle: :white_circle: </span><br></p>'
 
 - layout: left
   company: Personality
-  description: "<p>Team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br></p>
-	<p>Patience    :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:<br></p>
-	<p>Stuborn     :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:<br></p>"
+  description: '<p>Team spirit span style="float:right">:black_circle: :black_circle: :black_circle: :black_circle: :white_circle: </span><br></p>
+	<p>Patience <span style="float:right">:black_circle: :white_circle: :white_circle: :white_circle: :white_circle: </span><br></p>
+	<p>Stuborn  <span style="float:right">:black_circle: :black_circle: :black_circle: :black_circle: :black_circle: </span><br></p>'
 
 - layout: left
   company: Language
-  description: "<p>French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:<br></p>
-	<p>English  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>
-	<p>German   :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:<br></p>"
+  description: '<p>French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle: </span><br></p>
+	<p>English  <span style="float:right">:black_circle: :black_circle: :black_circle: :white_circle: :white_circle: </span><br></p>
+	<p>German <span style="float:right">:black_circle: :white_circle: :white_circle: :white_circle: :white_circle: </span><br></p>'
