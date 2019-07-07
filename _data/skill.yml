@@ -11,12 +11,12 @@
 
 - layout: left
   company: Personality
-  description: "Team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
-	Patience    :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:
-	Stuborn     :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:"
+  description: "<p>Team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br></p>
+	<p>Patience    :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:<br></p>
+	<p>Stuborn     :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:<br></p>"
 
 - layout: left
   company: Language
-  description: "French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
-	English  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
-	German   :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:"
+  description: "<p>French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:<br></p>
+	<p>English  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>
+	<p>German   :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:<br></p>"
