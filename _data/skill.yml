@@ -1,23 +1,23 @@
 - layout: left
   company: Management
   description: | # list mgm skills
-	"People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
+  "People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
 	Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
 	Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:"
 
   company: Technology
   description: |
-	"Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
+  "Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
 	Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:"
 
   company: Personality
   description: |
-	"Team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
+  "Team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
 	Patience    :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:
 	Stuborn     :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:"
 
   company: Language
   description: |
-	"French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
+  "French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
 	English  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
 	German   :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:"
