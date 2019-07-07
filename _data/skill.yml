@@ -1,19 +1,21 @@
 - layout: left
   company: Management
-  description: "People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:\\n
-	Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:\\n
-	Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:\\n"
+  description: "People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br>
+	Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br>
+	Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br>"
 
 - layout: left
   company: Technology
-  description: "Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
-	Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:"
+  description: "Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br>
+	Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br>"
 
+- layout: left
   company: Personality
   description: "Team spirit :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
 	Patience    :black_circle: :white_circle: :white_circle: :white_circle: :white_circle:
 	Stuborn     :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:"
 
+- layout: left
   company: Language
   description: "French   :black_circle: :black_circle: :black_circle: :black_circle: :black_circle:
 	English  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
