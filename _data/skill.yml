@@ -1,9 +1,10 @@
 - layout: left
   company: Management
-  description: "People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
-	Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:
-	Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:"
+  description: "People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:\\n
+	Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:\\n
+	Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:\\n"
 
+- layout: left
   company: Technology
   description: "Dev     :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:
 	Infra   :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:"
