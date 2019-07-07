@@ -1,8 +1,8 @@
 - layout: left
   company: Management
-  description: "<p>People  :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>
+  description: '<p>People <span style="float:left"> :black_circle: :black_circle: :black_circle: :white_circle: :white_circle: </span><br></p>
 	<p>Service :black_circle: :black_circle: :black_circle: :black_circle: :white_circle:<br></p>
-	<p>Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>"
+	<p>Product :black_circle: :black_circle: :black_circle: :white_circle: :white_circle:<br></p>'
 
 - layout: left
   company: Technology
