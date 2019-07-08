@@ -1,7 +1,7 @@
 - layout: left
   name: slotMachine
   link: lvenier.github.io/slotmy/
-  github: github.com/lvenier/slotmy
+  github: lvenier/slotmy
   quote: >
     Just for Fun. 
   description: | 
@@ -10,7 +10,7 @@
 - layout: left
   name: Yosh
   link: yoctu.com
-  github: github.com/yoctu/yosh
+  github: yoctu/yosh
   quote: >
     Bash Framework. Do you believe it ?
   description: | 
