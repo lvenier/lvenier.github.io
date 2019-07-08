@@ -1,4 +1,4 @@
-- layout: top-middle
+- layout: left
   name: slotMachine
   link: https://lvenier.github.io/slotmy/
   github: github.com/lvenier/slotmy
@@ -7,7 +7,7 @@
   description: | 
     Simple app to demonstrate js coding, socket and chromecast support. Just for the fun of it. Used to have the yoctu services plugged in as well.
 
-- layout: top-middle
+- layout: left
   name: Yosh
   link: https://yoctu.com
   github: https://github.com/yoctu/yosh
