@@ -6,8 +6,8 @@
 
 - layout: left
   company: Technology
-  description: '<p>Dev <span style="float:right">:black_circle: :black_circle: :black_circle: :white_circle: :white_circle: </span><br></p>
-	<p>Infra <span style="float:right">:black_circle: :black_circle: :black_circle: :black_circle: :white_circle: </span><br></p>'
+  description: '<p>Development <span style="float:right">:black_circle: :black_circle: :black_circle: :white_circle: :white_circle: </span><br></p>
+	<p>Infrastructure <span style="float:right">:black_circle: :black_circle: :black_circle: :black_circle: :white_circle: </span><br></p>'
 
 - layout: left
   company: Personality
