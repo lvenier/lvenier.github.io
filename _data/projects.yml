@@ -1,8 +1,17 @@
 - layout: top-middle
-  name: Super awesome project
-  link: github.com/sproogen
-  github: sproogen/resume-theme
+  name: slotMachine
+  link: https://lvenier.github.io/slotmy/
+  github: github.com/lvenier/slotmy
   quote: >
-    This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
-  description: | # this will include new lines to allow paragraphs
-    I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
+    Just for Fun. 
+  description: | 
+    Simple app to demonstrate js coding, socket and chromecast support. Just for the fun of it. Used to have the yoctu services plugged in as well.
+
+- layout: top-middle
+  name: Yosh
+  link: https://yoctu.com
+  github: https://github.com/yoctu/yosh
+  quote: >
+    Bash Framework. Do you believe it ?
+  description: | 
+    full Bash web franework. Used to create quick bash apis or cgi script. Simple and easy. 
