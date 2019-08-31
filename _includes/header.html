@@ -84,23 +84,28 @@
             </a>
           </li>
         {%- endif -%}
+        {%- if site.email -%}
+          <li>
+            <a target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
+              <i class="fa fa-envelope" title="Mail link"></i>
+            </a>
+          </li>
+        {%- endif -%}
+        {%- if site.phone -%}
+          <li>
+            <a target="_blank" href="sip:{{ site.phone }}" class="button button--sacnite button--round-l">
+              <i class="fa fa-phone" title="Phone link"></i>
+            </a>
+          </li>
+        {%- endif -%}
+        {%- if site.website -%}
+          <li>
+            <a target="_blank" href="sip:{{ site.website }}" class="button button--sacnite button--round-l">
+              <i class="fa fa-home" title="Web link"></i>
+            </a>
+          </li>
+        {%- endif -%}
       </ul>
-
-      {%- if site.email -%}
-        <p>
-          Email: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
-        </p>
-      {%- endif -%}
-      {%- if site.phone -%}
-        <p>
-          Phone: {{ site.phone | escape }}
-        </p>
-      {%- endif -%}
-      {%- if site.website -%}
-        <p>
-          Web: {% include a.html href=site.website %}{{ site.website | escape }}</a>
-        </p>
-      {%- endif -%}
     </div>
   </div>
 </div>
