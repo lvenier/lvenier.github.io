@@ -10,7 +10,8 @@ current: New York, USA
 email: lav@yoctu.com
 phone: 00352691482900
 website: https://yoctu.com
-stack: stack
+stack: | 
+  [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/lvenier/my-stack)
 
 # Social links
 google_analytics: UA-143362902-1
