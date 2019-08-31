@@ -5,10 +5,11 @@ favicon: images/laurent.ico
 # Personal info
 name: Laurent Venier
 title: IT Manager
+company: Yoctu
 current: New York, USA
 email: lav@yoctu.com
 phone: 00352691482900
-website: https://yoctu.com
+link: https://yoctu.com
 
 # Social links
 google_analytics: UA-143362902-1
