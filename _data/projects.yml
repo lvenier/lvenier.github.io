@@ -1,6 +1,15 @@
 - layout: left
+  name: Shaq
+  link: https://shaq.qual.yoctu.solutions/SHAQ
+  github: flash-global/shaq
+  quote: >
+    Current Project 
+  description: | 
+    Bidding Engine for Logistics.
+
+- layout: left
   name: slotMachine
-  link: lvenier.github.io/slotmy/
+  link: https://github.com/lvenier/slotmy
   github: lvenier/slotmy
   quote: >
     Just for Fun. 
