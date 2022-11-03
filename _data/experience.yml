@@ -1,8 +1,21 @@
 - layout: left
+  company: Saashup
+  link: saashup.com
+  job_title: Manager
+  dates: September 2022 - Present
+  quote: >
+    Provide standard Cloud apps for developpers and It manager
+  description: |
+    IT Product Manager focus on strategy, Design, Developement and Operations<br>
+    Comply with Micro Service Oriented Architecture and latest Technology<br>
+    Manage Product Releases and Deployments<br>
+    Participate to developments and operations if required<br>
+
+- layout: left
   company: Redspher
   link: yoctu.com
   job_title: Manager
-  dates: Mai 2018 - Present
+  dates: Mai 2018 - August 2022
   quote: >
     Provide standard Cloud apps for developpers and It manager
   description: |
@@ -10,7 +23,7 @@
     Comply with Micro Service Oriented Technology<br>
     Manage Product Releases and Deployments<br>
     Define and Follow Budget, Revenues <br>
-    develop and admisnitrate if required<br>
+    develop and operate if required<br>
 
 - layout: left
   company: Flash Europe International
