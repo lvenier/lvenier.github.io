@@ -25,9 +25,14 @@ about_content: |
 
   I am most skilled in: <mark>Work</mark> and <mark>Sports</mark>
 
-  <div>
-    <span><a href=""><img src="/images/badges/itil.png" width="64px"></img></a></span>
-    <span><a href=""><img src="/images/badges/scrum.jpg" width="64px"></img></a></span>
+  <br><div>
+    <span><a href=""><img src="/images/badges/itil.png" width="64px" /></a></span>
+    <span><a href=""><img src="/images/badges/scrum.jpg" width="64px" /></a></span>
+    <span><a href=""><img src="/images/badges/lpi1.png" width="64px" /></a></span>
+    <span><a href=""><img src="/images/badges/lpi2.png" width="64px" /></a></span>
+    <span><a href=""><img src="/images/badges/ccna.png" width="64px" /></a></span>
+    <span><a href=""><img src="/images/badges/jsnad.png" width="64px" /></a></span>
+    <span><a href=""><img src="/images/badges/jsnsd.png" width="64px" /></a></span>
   </div>
 
 more_content: | 
