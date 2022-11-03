@@ -5,11 +5,11 @@ favicon: images/laurent.ico
 # Personal info
 name: Laurent Venier
 title: IT Manager
-company: Yoctu
-current: New York, USA
-email: lav@yoctu.com
+company: SaasHup
+current: Nancy, FR
+email: lav@saashup.com
 phone: 00352691482900
-website: https://yoctu.com
+website: https://saashup.com
 stack: | 
   [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/lvenier/my-stack)
 
@@ -17,7 +17,6 @@ stack: |
 google_analytics: UA-143362902-1
 github_username:  lvenier
 youtube_username: lvenier
-googleplus_username: +lvenier
 
 # About Section
 about_profile_image: images/laurent.jpg
@@ -25,6 +24,9 @@ about_content: |
   Welcome, my name's Laurent and I'm a senior IT Manager. As well as managing people, I also have experience administrating systems and making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
 
   I am most skilled in: <mark>Work</mark> and <mark>Sports</mark>
+
+  <a href=""><img src="/images/badges/itil.png"></img></a>
+  <a href=""><img src="/images/badges/scrum.jpg"></img></a>
 
 more_content: | 
   Alongside my interests in IT some of my other interests and hobbies are:
