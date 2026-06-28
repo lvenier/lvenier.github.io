@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Laurent Venier | Cloud, DevOps & Platform Engineering</title>
-  <meta name="description" content="Laurent Venier - Cloud, DevOps, Platform Engineering, automation, containers, identity, observability and open-source projects." />
-  <meta property="og:title" content="Laurent Venier | Cloud, DevOps & Platform Engineering" />
-  <meta property="og:description" content="Senior IT, Cloud and DevOps profile with open-source projects around games, automation, infrastructure and observability." />
+  <title>Laurent Venier | IT Director / CTO / CIO</title>
+  <meta name="description" content="Laurent Venier - IT Director, CTO/CIO profile focused on technology strategy, service delivery, operations, governance, innovation and digital transformation." />
+  <meta property="og:title" content="Laurent Venier | IT Director / CTO / CIO" />
+  <meta property="og:description" content="Technology leadership profile focused on IT strategy, service delivery, governance, operations, innovation and digital transformation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://lvenier.github.io/" />
   <meta name="theme-color" content="#0f172a" />
@@ -14,17 +14,39 @@
 
   <style>
     :root {
+      color-scheme: dark;
       --bg: #0f172a;
-      --panel: rgba(15, 23, 42, 0.82);
-      --card: rgba(30, 41, 59, 0.78);
+      --bg-soft: #111827;
+      --panel: rgba(15, 23, 42, 0.86);
+      --card: rgba(30, 41, 59, 0.82);
       --text: #e5e7eb;
       --muted: #94a3b8;
-      --line: rgba(148, 163, 184, 0.22);
+      --line: rgba(148, 163, 184, 0.24);
       --accent: #38bdf8;
       --accent-2: #22c55e;
-      --accent-3: #f97316;
-      --white: #ffffff;
+      --accent-3: #f59e0b;
+      --button-text: #03111f;
       --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --hero-glow-1: rgba(56, 189, 248, 0.24);
+      --hero-glow-2: rgba(34, 197, 94, 0.17);
+    }
+
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --bg-soft: #eef2ff;
+      --panel: rgba(255, 255, 255, 0.9);
+      --card: rgba(255, 255, 255, 0.92);
+      --text: #0f172a;
+      --muted: #475569;
+      --line: rgba(15, 23, 42, 0.13);
+      --accent: #0284c7;
+      --accent-2: #16a34a;
+      --accent-3: #d97706;
+      --button-text: #ffffff;
+      --shadow: 0 24px 70px rgba(15, 23, 42, 0.13);
+      --hero-glow-1: rgba(2, 132, 199, 0.18);
+      --hero-glow-2: rgba(22, 163, 74, 0.13);
     }
 
     * { box-sizing: border-box; }
@@ -36,10 +58,11 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 32rem),
-        radial-gradient(circle at 85% 8%, rgba(34, 197, 94, 0.18), transparent 25rem),
-        linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
+        radial-gradient(circle at top left, var(--hero-glow-1), transparent 32rem),
+        radial-gradient(circle at 85% 8%, var(--hero-glow-2), transparent 25rem),
+        linear-gradient(135deg, var(--bg) 0%, var(--bg-soft) 100%);
       line-height: 1.6;
+      min-height: 100vh;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -54,7 +77,7 @@
       top: 0;
       z-index: 10;
       backdrop-filter: blur(16px);
-      background: rgba(2, 6, 23, 0.72);
+      background: color-mix(in srgb, var(--panel) 88%, transparent);
       border-bottom: 1px solid var(--line);
     }
 
@@ -67,8 +90,16 @@
     }
 
     .brand {
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: -0.03em;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-links {
@@ -79,7 +110,20 @@
       color: var(--muted);
     }
 
-    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover { color: var(--text); }
+
+    .theme-toggle {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: none;
+    }
+
+    .theme-toggle:hover { border-color: var(--accent); }
 
     .hero {
       padding: 72px 0 42px;
@@ -96,26 +140,26 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #bae6fd;
-      background: rgba(14, 165, 233, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.28);
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
       padding: 8px 12px;
       border-radius: 999px;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.9rem;
     }
 
     h1 {
-      font-size: clamp(2.6rem, 7vw, 5.4rem);
-      line-height: 0.95;
+      font-size: clamp(2.5rem, 7vw, 5.2rem);
+      line-height: 0.96;
       margin: 24px 0 18px;
-      letter-spacing: -0.08em;
+      letter-spacing: -0.075em;
     }
 
     .lead {
       color: var(--muted);
-      font-size: clamp(1.05rem, 2vw, 1.28rem);
-      max-width: 760px;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      max-width: 790px;
       margin: 0 0 28px;
     }
 
@@ -133,20 +177,19 @@
       padding: 12px 16px;
       border-radius: 14px;
       border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.06);
-      font-weight: 750;
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+      font-weight: 780;
       transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(56, 189, 248, 0.5);
+      border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
     }
 
     .btn.primary {
-      background: linear-gradient(135deg, #0ea5e9, #22c55e);
-      color: #03111f;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: var(--button-text);
       border: none;
     }
 
@@ -164,8 +207,8 @@
       height: 170px;
       object-fit: cover;
       border-radius: 999px;
-      border: 4px solid rgba(56, 189, 248, 0.35);
-      box-shadow: 0 16px 50px rgba(56, 189, 248, 0.18);
+      border: 4px solid color-mix(in srgb, var(--accent) 35%, transparent);
+      box-shadow: 0 16px 50px color-mix(in srgb, var(--accent) 18%, transparent);
     }
 
     .profile-card h2 {
@@ -186,7 +229,7 @@
     }
 
     .stat {
-      background: rgba(255, 255, 255, 0.05);
+      background: color-mix(in srgb, var(--card) 85%, transparent);
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 12px;
@@ -194,7 +237,7 @@
 
     .stat strong {
       display: block;
-      color: var(--white);
+      color: var(--text);
       font-size: 1.25rem;
     }
 
@@ -203,9 +246,7 @@
       font-size: 0.78rem;
     }
 
-    section {
-      padding: 46px 0;
-    }
+    section { padding: 46px 0; }
 
     .section-title {
       display: flex;
@@ -224,24 +265,19 @@
     .section-title p {
       color: var(--muted);
       margin: 0;
-      max-width: 620px;
+      max-width: 650px;
     }
 
-    .grid {
-      display: grid;
-      gap: 16px;
-    }
+    .grid { display: grid; gap: 16px; }
 
-    .grid.cards {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    .grid.cards { grid-template-columns: repeat(4, 1fr); }
 
     .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 24px;
       padding: 22px;
-      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.08);
     }
 
     .card h3 {
@@ -263,13 +299,13 @@
     }
 
     .tag {
-      color: #cbd5e1;
-      border: 1px solid rgba(148, 163, 184, 0.22);
-      background: rgba(15, 23, 42, 0.6);
+      color: var(--text);
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--panel) 70%, transparent);
       border-radius: 999px;
       padding: 6px 10px;
       font-size: 0.82rem;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .project-grid {
@@ -281,14 +317,14 @@
     .project {
       position: relative;
       overflow: hidden;
-      min-height: 260px;
+      min-height: 250px;
     }
 
     .project::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.14), transparent 18rem);
+      background: radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 18rem);
       pointer-events: none;
     }
 
@@ -298,8 +334,8 @@
     }
 
     .project a {
-      color: #bae6fd;
-      font-weight: 800;
+      color: var(--accent);
+      font-weight: 850;
     }
 
     .timeline {
@@ -310,23 +346,21 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 190px 1fr;
       gap: 18px;
       align-items: start;
       padding: 18px;
       border: 1px solid var(--line);
-      background: rgba(15, 23, 42, 0.56);
+      background: color-mix(in srgb, var(--card) 82%, transparent);
       border-radius: 22px;
     }
 
     .timeline-date {
-      color: #bae6fd;
-      font-weight: 800;
+      color: var(--accent);
+      font-weight: 850;
     }
 
-    .timeline h3 {
-      margin: 0 0 6px;
-    }
+    .timeline h3 { margin: 0 0 6px; }
 
     .timeline p {
       color: var(--muted);
@@ -342,10 +376,10 @@
     .skill {
       padding: 10px 13px;
       border-radius: 13px;
-      background: rgba(255, 255, 255, 0.06);
+      background: color-mix(in srgb, var(--card) 84%, transparent);
       border: 1px solid var(--line);
-      color: #dbeafe;
-      font-weight: 720;
+      color: var(--text);
+      font-weight: 760;
     }
 
     .two-col {
@@ -363,8 +397,9 @@
     }
 
     @media print {
+      html { color-scheme: light; }
       body { background: white; color: #111827; }
-      .nav, .actions { display: none; }
+      .nav, .actions, .theme-toggle { display: none; }
       .card, .profile-card, .timeline-item { box-shadow: none; background: white; border-color: #d1d5db; }
       .lead, .card p, .timeline p, .section-title p, .profile-card p { color: #374151; }
       section { padding: 20px 0; }
@@ -373,10 +408,12 @@
     @media (max-width: 900px) {
       .hero-grid, .project-grid, .two-col { grid-template-columns: 1fr; }
       .grid.cards { grid-template-columns: repeat(2, 1fr); }
+      .section-title { align-items: start; flex-direction: column; }
     }
 
     @media (max-width: 620px) {
       .nav-inner { align-items: flex-start; flex-direction: column; }
+      .nav-right { justify-content: flex-start; }
       .grid.cards { grid-template-columns: 1fr; }
       .quick-stats { grid-template-columns: 1fr; }
       .timeline-item { grid-template-columns: 1fr; }
@@ -388,12 +425,15 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#">Laurent Venier</a>
-      <div class="nav-links" aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+      <div class="nav-right">
+        <div class="nav-links" aria-label="Main navigation">
+          <a href="#leadership">Leadership</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#initiatives">Initiatives</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle" type="button" id="themeToggle" aria-label="Toggle light and dark theme">🌙 Dark</button>
       </div>
     </div>
   </nav>
@@ -401,12 +441,13 @@
   <header class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">Cloud • DevOps • Platform Engineering • Open Source</span>
-        <h1>Building reliable platforms, automation and creative digital products.</h1>
+        <span class="eyebrow">IT Director • CTO / CIO mindset • Transformation leadership</span>
+        <h1>Leading technology with vision, governance and delivery focus.</h1>
         <p class="lead">
-          Senior IT and platform-oriented engineer with strong experience across Linux, networking,
-          containers, identity, observability, service management and software development.
-          I enjoy turning infrastructure and product ideas into working systems.
+          Senior IT leader combining operational management, enterprise technology strategy,
+          service delivery, governance, security awareness and hands-on technical credibility.
+          I help organisations modernise their information systems while keeping reliability,
+          cost control and business value at the centre.
         </p>
 
         <div class="actions">
@@ -420,56 +461,113 @@
       <aside class="profile-card" aria-label="Profile summary">
         <img class="avatar" src="/images/laurent.jpg" alt="Laurent Venier" />
         <h2>Laurent Venier</h2>
-        <p>IT Manager • Cloud & DevOps • Builder</p>
+        <p>IT Director • Technology Leader • Builder</p>
         <div class="quick-stats">
           <div class="stat"><strong>20+</strong><span>years IT</span></div>
-          <div class="stat"><strong>4</strong><span>main projects</span></div>
-          <div class="stat"><strong>100%</strong><span>hands-on</span></div>
+          <div class="stat"><strong>360°</strong><span>IT scope</span></div>
+          <div class="stat"><strong>Hands-on</strong><span>leadership</span></div>
         </div>
       </aside>
     </div>
   </header>
 
   <main>
-    <section id="summary">
+    <section id="leadership">
       <div class="container two-col">
         <div class="card">
-          <h3>Professional profile</h3>
+          <h3>Executive profile</h3>
           <p>
-            I combine operational leadership with hands-on engineering. My work covers cloud and
-            infrastructure architecture, Linux platforms, containers, reverse proxies, monitoring,
-            identity providers, CI/CD pipelines and automation workflows.
+            I position IT as a business enabler: reliable operations, clear governance,
+            pragmatic architecture, service quality, risk reduction and measurable delivery.
+            My background allows me to speak with executives, vendors, engineers and users.
           </p>
         </div>
         <div class="card">
-          <h3>What makes me different</h3>
+          <h3>Leadership style</h3>
           <p>
-            I do not only manage systems: I build tools, prototypes and products. My recent work
-            includes web games, Electron applications, geolocation games, custom map tiles,
-            Playwright testing, GitHub Actions and OpenID Connect integrations.
+            I am pragmatic, structured and delivery-oriented. I like building teams and systems
+            that are understandable, maintainable and aligned with real needs instead of technology
+            for technology’s sake.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="expertise">
       <div class="container">
         <div class="section-title">
-          <h2>Featured projects</h2>
-          <p>Personal and open-source work showing infrastructure, software, automation and game development.</p>
+          <h2>Leadership domains</h2>
+          <p>Areas where I can contribute as IT Director, Head of IT, CTO or CIO-oriented leader.</p>
+        </div>
+
+        <div class="grid cards">
+          <div class="card">
+            <h3>IT Strategy</h3>
+            <p>Technology roadmap, target architecture, prioritisation, governance and business alignment.</p>
+          </div>
+          <div class="card">
+            <h3>Service Delivery</h3>
+            <p>Operational quality, support model, incident handling, continuity and stakeholder satisfaction.</p>
+          </div>
+          <div class="card">
+            <h3>Operations Management</h3>
+            <p>Infrastructure, applications, suppliers, lifecycle management, standards and reliability.</p>
+          </div>
+          <div class="card">
+            <h3>Security & Risk</h3>
+            <p>Identity, access control, compliance awareness, risk reduction and secure-by-design decisions.</p>
+          </div>
+          <div class="card">
+            <h3>Digital Transformation</h3>
+            <p>Modernisation, automation, process improvement and practical adoption of new technologies.</p>
+          </div>
+          <div class="card">
+            <h3>Budget & Vendors</h3>
+            <p>Cost awareness, supplier coordination, contract follow-up and value-driven technology choices.</p>
+          </div>
+          <div class="card">
+            <h3>Team Leadership</h3>
+            <p>People management, coaching, coordination, ownership, delivery culture and continuous improvement.</p>
+          </div>
+          <div class="card">
+            <h3>Innovation</h3>
+            <p>Rapid prototyping, product thinking, automation, AI-assisted workflows and user-focused solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="initiatives">
+      <div class="container">
+        <div class="section-title">
+          <h2>Selected initiatives</h2>
+          <p>Concrete examples showing leadership, product thinking and technical credibility.</p>
         </div>
 
         <div class="project-grid">
           <article class="card project">
+            <div class="project-icon">☁️</div>
+            <h3>SaaShup / PaasBox platform vision</h3>
+            <p>
+              Platform management and mini virtual datacenter concepts focused on simplifying
+              operations, centralising observability, improving access control and accelerating delivery.
+            </p>
+            <a href="https://saashup.com" target="_blank" rel="noreferrer">View SaaShup →</a>
+            <div class="tag-list">
+              <span class="tag">Product Strategy</span><span class="tag">Platform Vision</span><span class="tag">Operations</span><span class="tag">Governance</span>
+            </div>
+          </article>
+
+          <article class="card project">
             <div class="project-icon">🥊</div>
             <h3>Box4Fit</h3>
             <p>
-              Webcam-based boxing fitness game using JavaScript, p5.js, ml5.js and Electron.
-              Includes camera detection, scoring, animations, packaging and CI.
+              Personal innovation project: camera-based fitness game combining computer vision,
+              user experience, scoring logic, desktop packaging and automated quality checks.
             </p>
             <a href="https://github.com/lvenier/tfit" target="_blank" rel="noreferrer">View project →</a>
             <div class="tag-list">
-              <span class="tag">JavaScript</span><span class="tag">p5.js</span><span class="tag">ml5.js</span><span class="tag">Electron</span>
+              <span class="tag">Innovation</span><span class="tag">Product Design</span><span class="tag">UX</span><span class="tag">Automation</span>
             </div>
           </article>
 
@@ -477,24 +575,11 @@
             <div class="project-icon">🌍</div>
             <h3>CuriooCity</h3>
             <p>
-              Mobile geolocation exploration game for kids, with portals, chests, collectible cards,
-              tours, mini-games and real-world discovery mechanics.
+              Geolocation exploration game for children, built around discovery, collectible content,
+              learning, daily engagement and real-world interaction.
             </p>
             <div class="tag-list">
-              <span class="tag">Unity</span><span class="tag">Mobile</span><span class="tag">Geolocation</span><span class="tag">Game Design</span>
-            </div>
-          </article>
-
-          <article class="card project">
-            <div class="project-icon">☁️</div>
-            <h3>PaasBox / SaaShup platform work</h3>
-            <p>
-              Mini virtual datacenter and platform management ideas combining Docker, Traefik,
-              NetBox, Grafana, Prometheus, Keycloak, Dex, Node-RED and automation.
-            </p>
-            <a href="https://saashup.com" target="_blank" rel="noreferrer">View SaaShup →</a>
-            <div class="tag-list">
-              <span class="tag">Docker</span><span class="tag">Traefik</span><span class="tag">OIDC</span><span class="tag">Observability</span>
+              <span class="tag">Product Thinking</span><span class="tag">Mobile</span><span class="tag">Education</span><span class="tag">User Engagement</span>
             </div>
           </article>
 
@@ -502,11 +587,11 @@
             <div class="project-icon">🗺️</div>
             <h3>Curioo Tiles</h3>
             <p>
-              Custom OpenStreetMap tile generator with themes, health checks, metrics endpoints,
-              frontend editor, automated tests and CI/CD improvements.
+              Custom map tile and theme generation initiative, including monitoring, health checks,
+              quality automation and configurable user-facing tools.
             </p>
             <div class="tag-list">
-              <span class="tag">Node.js</span><span class="tag">OpenStreetMap</span><span class="tag">Prometheus</span><span class="tag">Playwright</span>
+              <span class="tag">Geospatial</span><span class="tag">Service Quality</span><span class="tag">Monitoring</span><span class="tag">Delivery</span>
             </div>
           </article>
         </div>
@@ -516,65 +601,30 @@
     <section id="skills">
       <div class="container">
         <div class="section-title">
-          <h2>Core skills</h2>
-          <p>Technologies and domains I use to design, operate and improve platforms and products.</p>
+          <h2>Capabilities</h2>
+          <p>A balanced profile between management, architecture, operations and innovation.</p>
         </div>
 
-        <div class="grid cards">
-          <div class="card">
-            <h3>Infrastructure</h3>
-            <p>Linux, Debian, networking, reverse proxy, VPN, DNS, SSL/TLS, service operations.</p>
-          </div>
-          <div class="card">
-            <h3>Containers & platform</h3>
-            <p>Docker, Docker Compose, Traefik, NGINX Plus, GitHub Container Registry.</p>
-          </div>
-          <div class="card">
-            <h3>Identity & security</h3>
-            <p>OIDC, OAuth2, Keycloak, Dex, Google/GitHub login, API keys and access control.</p>
-          </div>
-          <div class="card">
-            <h3>Observability</h3>
-            <p>Grafana, Prometheus, metrics endpoints, health checks, logs and dashboards.</p>
-          </div>
-          <div class="card">
-            <h3>Development</h3>
-            <p>JavaScript, Node.js, frontend apps, Electron, APIs, automation scripts.</p>
-          </div>
-          <div class="card">
-            <h3>Testing & CI/CD</h3>
-            <p>GitHub Actions, Playwright, Vitest, coverage, release workflows and artifacts.</p>
-          </div>
-          <div class="card">
-            <h3>Game & creative tech</h3>
-            <p>Unity, p5.js, Three.js, ml5.js, geolocation games and interactive prototypes.</p>
-          </div>
-          <div class="card">
-            <h3>Leadership</h3>
-            <p>IT management, service delivery, operations, team coordination and product thinking.</p>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:16px">
+        <div class="card">
           <div class="skill-cloud">
-            <span class="skill">Debian</span>
-            <span class="skill">Docker</span>
-            <span class="skill">Node.js</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">NGINX Plus</span>
-            <span class="skill">Traefik</span>
-            <span class="skill">Keycloak</span>
-            <span class="skill">Dex</span>
-            <span class="skill">Grafana</span>
-            <span class="skill">Prometheus</span>
-            <span class="skill">Playwright</span>
-            <span class="skill">Vitest</span>
-            <span class="skill">Electron</span>
-            <span class="skill">Unity</span>
-            <span class="skill">p5.js</span>
-            <span class="skill">Three.js</span>
-            <span class="skill">OpenStreetMap</span>
-            <span class="skill">GitHub Actions</span>
+            <span class="skill">IT Strategy</span>
+            <span class="skill">Technology Roadmap</span>
+            <span class="skill">Service Delivery</span>
+            <span class="skill">Operations Management</span>
+            <span class="skill">Team Leadership</span>
+            <span class="skill">Governance</span>
+            <span class="skill">Risk Management</span>
+            <span class="skill">Security Awareness</span>
+            <span class="skill">Supplier Management</span>
+            <span class="skill">Budget Awareness</span>
+            <span class="skill">Digital Transformation</span>
+            <span class="skill">Automation</span>
+            <span class="skill">Observability</span>
+            <span class="skill">Identity Management</span>
+            <span class="skill">Enterprise Architecture</span>
+            <span class="skill">Product Thinking</span>
+            <span class="skill">Innovation</span>
+            <span class="skill">Continuous Improvement</span>
           </div>
         </div>
       </div>
@@ -584,39 +634,39 @@
       <div class="container">
         <div class="section-title">
           <h2>Experience focus</h2>
-          <p>A compact CV-style overview. You can extend this with company names and exact dates.</p>
+          <p>A compact executive CV overview. Add company names and dates if you want a more classic résumé format.</p>
         </div>
 
         <div class="timeline">
           <div class="timeline-item">
-            <div class="timeline-date">Current focus</div>
+            <div class="timeline-date">IT Leadership</div>
             <div>
-              <h3>Platform engineering, automation and open-source development</h3>
+              <h3>IT Director / Head of IT orientation</h3>
               <p>
-                Building and improving container platforms, identity integrations, CI/CD workflows,
-                monitoring stacks and developer-facing tools, while maintaining multiple personal projects.
+                Define priorities, manage operations, align stakeholders, improve service quality,
+                guide technical decisions and ensure IT delivers measurable value to the organisation.
               </p>
             </div>
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-date">IT leadership</div>
+            <div class="timeline-date">Transformation</div>
             <div>
-              <h3>IT Manager / Service & Operations</h3>
+              <h3>Modernisation, automation and governance</h3>
               <p>
-                Leading operations, coordinating service delivery, improving reliability,
-                supporting teams and aligning technical choices with business needs.
+                Improve processes and systems through automation, standardisation, better observability,
+                stronger identity management and clearer operational ownership.
               </p>
             </div>
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-date">Engineering background</div>
+            <div class="timeline-date">Technical credibility</div>
             <div>
-              <h3>Systems, network and software engineering</h3>
+              <h3>Hands-on engineering background</h3>
               <p>
-                Hands-on experience with Linux systems, networking, containers, automation,
-                web applications, APIs, observability and secure access management.
+                Strong foundation in systems, networking, software, infrastructure, security,
+                integration and tooling, enabling informed decisions and efficient collaboration with experts.
               </p>
             </div>
           </div>
@@ -660,7 +710,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Open to discussions around platform engineering, automation, infrastructure and creative technical projects.</p>
+          <p>Open to discussions around IT leadership, technology strategy, transformation and innovation.</p>
         </div>
 
         <div class="two-col">
@@ -679,8 +729,33 @@
 
   <footer class="footer">
     <div class="container">
-      © 2026 Laurent Venier — Cloud, DevOps, Platform Engineering & Open Source.
+      © 2026 Laurent Venier — IT Director / CTO / CIO profile.
     </div>
   </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("theme");
+    const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    const initialTheme = savedTheme || preferredTheme;
+
+    function setTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      toggle.textContent = theme === "dark" ? "🌙 Dark" : "☀️ Light";
+      document.querySelector('meta[name="theme-color"]').setAttribute(
+        "content",
+        theme === "dark" ? "#0f172a" : "#f8fafc"
+      );
+    }
+
+    setTheme(initialTheme);
+
+    toggle.addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      setTheme(next);
+    });
+  </script>
 </body>
 </html>
