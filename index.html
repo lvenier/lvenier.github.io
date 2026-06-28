@@ -1,776 +1,686 @@
 <!DOCTYPE html>
-<html lang=" en ">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laurent Venier | IT Manager</title>
-    <meta property="og:title" content="IT Manager" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="description" content="LaV personnal page" />
-    <meta property="og:description" content="LaV personnal page" />
-    <link rel="canonical" href="https://lvenier.github.io/" />
-    <meta property="og:url" content="https://lvenier.github.io/" />
-    <meta property="og:site_name" content="IT Manager" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="IT Manager" />
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "description": "LaV personnal page",
-            "headline": "IT Manager",
-            "name": "IT Manager",
-            "url": "https://lvenier.github.io/"
-        }
-    </script>
-    <link rel="shortcut icon" type="image/x-icon" href="/images/laurent.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/3b866ca4b0.js" crossorigin="anonymous"></script>
-    <style>
-        .quote {
-            color: darkgrey;
-            font-style: italic;
-            font-size: small;
-            text-align: center !important;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laurent Venier | Cloud, DevOps & Platform Engineering</title>
+  <meta name="description" content="Laurent Venier - Cloud, DevOps, Platform Engineering, automation, containers, identity, observability and open-source projects." />
+  <meta property="og:title" content="Laurent Venier | Cloud, DevOps & Platform Engineering" />
+  <meta property="og:description" content="Senior IT, Cloud and DevOps profile with open-source projects around games, automation, infrastructure and observability." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lvenier.github.io/" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/laurent.ico" />
 
-        .link {
-            color: grey;
-            text-decoration: none;
-            font-style: italic;
-            font-size: small;
-        }
-    </style>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: rgba(15, 23, 42, 0.82);
+      --card: rgba(30, 41, 59, 0.78);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: rgba(148, 163, 184, 0.22);
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --accent-3: #f97316;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 32rem),
+        radial-gradient(circle at 85% 8%, rgba(34, 197, 94, 0.18), transparent 25rem),
+        linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(2, 6, 23, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .hero {
+      padding: 72px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #bae6fd;
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 5.4rem);
+      line-height: 0.95;
+      margin: 24px 0 18px;
+      letter-spacing: -0.08em;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      max-width: 760px;
+      margin: 0 0 28px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.06);
+      font-weight: 750;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(56, 189, 248, 0.5);
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      color: #03111f;
+      border: none;
+    }
+
+    .profile-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 999px;
+      border: 4px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 16px 50px rgba(56, 189, 248, 0.18);
+    }
+
+    .profile-card h2 {
+      margin: 16px 0 4px;
+      font-size: 1.4rem;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .quick-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--white);
+      font-size: 1.25rem;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    section {
+      padding: 46px 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.75rem, 3vw, 2.4rem);
+      margin: 0;
+      letter-spacing: -0.04em;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 620px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid.cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.16);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0 0 14px;
+      font-size: 0.96rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      color: #cbd5e1;
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 0%, rgba(56, 189, 248, 0.14), transparent 18rem);
+      pointer-events: none;
+    }
+
+    .project-icon {
+      font-size: 2.1rem;
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      color: #bae6fd;
+      font-weight: 800;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: rgba(15, 23, 42, 0.56);
+      border-radius: 22px;
+    }
+
+    .timeline-date {
+      color: #bae6fd;
+      font-weight: 800;
+    }
+
+    .timeline h3 {
+      margin: 0 0 6px;
+    }
+
+    .timeline p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 10px 13px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: #dbeafe;
+      font-weight: 720;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .footer {
+      padding: 40px 0 54px;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+      margin-top: 36px;
+    }
+
+    @media print {
+      body { background: white; color: #111827; }
+      .nav, .actions { display: none; }
+      .card, .profile-card, .timeline-item { box-shadow: none; background: white; border-color: #d1d5db; }
+      .lead, .card p, .timeline p, .section-title p, .profile-card p { color: #374151; }
+      section { padding: 20px 0; }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .project-grid, .two-col { grid-template-columns: 1fr; }
+      .grid.cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 620px) {
+      .nav-inner { align-items: flex-start; flex-direction: column; }
+      .grid.cards { grid-template-columns: 1fr; }
+      .quick-stats { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container header-container">
-        <div class="row mt-3">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
-                <h1>Laurent Venier</h1>
-                <h2>IT Manager</h2>
-                <i>mail: lav@saashup.com</i><br>
-                <i>ph: +352691482900</i><br>
-                <p><a href="https://stackshare.io/lav3582/saashup" class="mx-3"><img
-                            src="https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat" alt="StackShare"></a>
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
-                <div class="text-center">
-                    <span>
-                        <a target="_blank" href="https://github.com/lvenier" class="btn">
-                            <i class="fa-brands fa-3x fa-github"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a target="_blank" href="https://www.youtube.com/lvenier" class="btn">
-                            <i class="fa-brands fa-3x fa-youtube text-danger"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a target="_blank" href="mailto:lav@saashup.com" class="btn">
-                            <i class="fa-solid fa-3x fa-envelope"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a target="_blank" href="sip:00352691482900" class="btn">
-                            <i class="fa-solid fa-3x fa-phone text-secondary"></i>
-                        </a>
-                    </span>
-                    <span>
-                        <a target="_blank" href="https://saashup.com" class="btn">
-                            <i class="fa-solid fa-3x fa-globe text-primary"></i>
-                        </a>
-                    </span>
-                </div>
-            </div>
-        </div>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">Laurent Venier</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">
-            <div class="container">
-                <h1 class="text-center m-3">About Me</h1>
-                <div class="row clearfix">
-                    <div class="col-xs-12 col-sm-4 col-md-3 text-center">
-                        <img class="rounded-circle" src="/images/laurent.jpg"></img>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <div class="m-4">Welcome, my name’s Laurent and I’m a senior <b>IT Manager</b>. As well as
-                            managing people, I also
-                            have experience <b>operating systems</b> and <b>developing software</b> and web apps. I have
-                            worked at a
-                            number of companies gaining <b>teamwork</b> and <b>leadership</b> skills.</div>
-                        <div class="m-4">I am most skilled in: <b>Work</b> and <b>Sports</b></div>
-                        <div class="container text-center">
-                            <span class="m-2"><a href=""><img src="/images/badges/scrum.jpg" width="64px"></a></span>
-                            <span class="m-2"><a href=""><img src="/images/badges/lpi1.png" width="64px"></a></span>
-                            <span class="m-2"><a href=""><img src="/images/badges/lpi2.png" width="64px"></a></span>
-                            <span class="m-2"><a href=""><img src="/images/badges/jsnad.png" width="64px"></a></span>
-                            <span class="m-2"><a href=""><img src="/images/badges/jsnsd.png" width="64px"></a></span>
-                            <span class="m-2"><a href=""><img src="/images/badges/ccna.png" width="64px"></a></span>
-                            <span class="m-2"><a href=""><img src="/images/badges/itil.png" width="64px"></a></span>
-                            <span class="m-2"><a href=""><img src="/images/badges/prince2.png" width="64px"></a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <div class="container skills-container">
-                <h1 class="text-center m-3">Skills</h1>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Management</h4>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p>People <span style="float:right"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> </span><br></p>
-                        <p>Service <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> </span><br></p>
-                        <p>Product <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> </span><br></p>
+  </nav>
 
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Technology</h4>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p>Development <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> </span><br></p>
-                        <p>Infrastructure <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> </span><br></p>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Cloud • DevOps • Platform Engineering • Open Source</span>
+        <h1>Building reliable platforms, automation and creative digital products.</h1>
+        <p class="lead">
+          Senior IT and platform-oriented engineer with strong experience across Linux, networking,
+          containers, identity, observability, service management and software development.
+          I enjoy turning infrastructure and product ideas into working systems.
+        </p>
 
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Personality</h4>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p>Team spirit <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> </span><br></p>
-                        <p>Patience <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> </span><br></p>
-                        <p>Stubborn <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> </span><br></p>
-
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Language</h4>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p>French <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> </span><br></p>
-                        <p>English <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> </span><br></p>
-                        <p>German <span style="float:right"><img class="emoji" title=":black_circle:"
-                                    alt=":black_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26ab.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> <img class="emoji" title=":white_circle:"
-                                    alt=":white_circle:"
-                                    src="https://github.githubassets.com/images/icons/emoji/unicode/26aa.png"
-                                    height="20" width="20"> </span><br></p>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <div class="container experience-container">
-                <h1 class="text-center m-3">Experience</h1>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="https://saashup.com" alt="saashup.com" src="/images/companies/saashup.png"
-                                width="32px" class="mx-2" />Saashup</h4>
-                        <a href="https://saashup.com" target="_blank" class="link"></a>
-                        <p><b>CTO</b></p>
-                        <p>September 2022 - Present</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Provide standard Cloud apps for developpers and It manager
-                        </p>
-                        <p>IT Product Manager focus on strategy, Design, Developement and Operations<br>
-                            Comply with Micro Service Oriented Architecture and latest Technology<br>
-                            Manage Product Releases and Deployments<br>
-                            Participate to developments and operations if required<br></p>
-
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="https://redspher.com" alt="redspher.com" src="/images/companies/redspher.jpg"
-                                width="32px" class="mx-2" />Redspher</h4>
-                        <a href="https://yoctu.com" target="_blank" class="link">yoctu.com</a>
-                        <p><b>IT Manager</b></p>
-                        <p>Mai 2018 - August 2022</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Provide standard Cloud apps for developpers and It manager
-                        </p>
-                        <p>IT Product Manager focus on strategy, Design and Operations<br>
-                            Comply with Micro Service Oriented Technology<br>
-                            Manage Product Releases and Deployments<br>
-                            Define and Follow Budget, Revenues <br>
-                            develop and operate if required<br></p>
-
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="https://flash.global" alt="flash.global" src="/images/companies/flash.jpg"
-                                width="32px" class="mx-2" />Flash Europe International</h4>
-                        <a href="https://flash.global" target="_blank" class="link">flash.global</a>
-                        <p><b>CIO</b></p>
-                        <p>Nov 2015 - Mai 2018</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Logitics company specialised in Premium Freight
-                        </p>
-                        <p>Manage 30 people with various profiles as developers, support and infrastructure.<br>
-                            Migrate to major cloud provider<br>
-                            Implement Agile to the development team<br>
-                            Support and Challenge Infrastructure and development team in Technical Orientation<br>
-                            Migrate monolithic CRM to SOA<br>
-                            Support HR for recruitment, job description and career plan<br>
-                            Convert Company strategy and vision to IT plans<br>
-                            Arbitrate Business/IT decisions<br></p>
-
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="https://atos.com" alt="atos.com" src="/images/companies/atos.png" width="32px"
-                                class="mx-2" />ATOS</h4>
-                        <a href="https://atos.com" target="_blank" class="link">atos.com</a>
-                        <p><b>Lead of IS Customer Services for European Commission</b></p>
-                        <p>Apr 2012 - Nov 2015</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">IT Company - Formerly Bull by acquisition
-                        </p>
-                        <p>Responsible for the “IS Customer Service” operational service at the European Commission
-                            within the agreed budget and SLAs.<br>
-                            Managed the Transition from T&amp;M to a Managed Service<br>
-                            Manage/Implement ITIL processes (Change, Request Fulfillment, Configuration and Capacity
-                            Management).<br>
-                            Lead Project/Change Managers and service desk agents profiles<br>
-                            Manage critical projects (migration, development, transition…)<br>
-                            Coach, support and develop team members<br>
-                            Ensure discussions, decisions and escalations to deliver projects/changes successfully<br>
-                            Coordinate with internal and external customers and/or stakeholders<br>
-                            Improve Methodology and/or workflow/processes/procedures<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="https://tcs.com" alt="tcs.com" src="/images/companies/tcs.png" width="32px"
-                                class="mx-2" />TCS</h4>
-                        <a href="https//tcs.com" target="_blank" class="link">tcs.com</a>
-                        <p><b>Team Leader</b></p>
-                        <p>Jan 2010 - Apr 2012</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">IT Company - Branch of TATA group
-                        </p>
-                        <p>Responsible for the “Backup &amp; Storage” operational service at the European Commission<br>
-                            Manage Transition from/to Managed Services<br>
-                            Responsible for the SLA with the European Commission - reporting: weekly, monthly and
-                            specifics (supervision, validation and presentation) - improvement and adjustment according
-                            to the ITIL standards.<br>
-                            Team leading including organisation Setup, Task assignment and daily follow up of
-                            activities<br>
-                            Responsible for main ITIL processes implementation (Incident, Change, Problem,
-                            Configuration, Capacity Management..)<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="https://www.dimensiondata.com" alt="dimensiondata.com"
-                                src="/images/companies/ddata.jpg" width="32px" class="mx-2" />Dimension Data</h4>
-                        <a href="https://www.dimensiondata.com" target="_blank" class="link">www.dimensiondata.com</a>
-                        <p><b>Team Leader</b></p>
-                        <p>Apr 2009 - Jan 2010</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">IT Company - Branch of NTT group
-                        </p>
-                        <p>Responsible for the “Backup &amp; Storage”operational service at the European Commission.<br>
-                            Responsible for the SLA with the European Commission - reporting: weekly, monthly and
-                            specifics (supervision, validation and presentation) - improvement and adjustment according
-                            to the ITIL standards.<br>
-                            Team leading including Organisation Setup, Task assignment and daily follow up of
-                            activities<br>
-                            Responsible for main ITIL processes implementation (Incident, Change, Problem,
-                            Configuration, Capacity Management..)<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="https://www.sun.com" alt="sun.com" src="/images/companies/sun.png" width="32px"
-                                class="mx-2" />Sun Microsystems</h4>
-                        <a href="https://www.sun.com" target="_blank" class="link">www.sun.com</a>
-                        <p><b>Storage Engineer</b></p>
-                        <p>Oct 2007 - Apr 2009</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">IT Company specialized in OS, Servers and Storage
-                        </p>
-                        <p>Sun Luxembourg Clients Support Service<br>
-                            Supports hardware servers and storage in Large Data Centers<br>
-                            Supports Software (Operating Systems, Backups..) for Customers<br>
-                            Defines, schedules, and implements advanced infrastructure maintenance<br>
-                            Develops standards and policies<br>
-                            On call activities to support customers infrastructure<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4>SapiensTech</h4>
-                        <a href="//www.sapienstech.net" target="_blank" class="link">www.sapienstech.net</a>
-                        <p><b>IT and Project Manager</b></p>
-                        <p>Feb 2006 - Oct 2007</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Fiancial Digital Company
-                        </p>
-                        <p>Manage Projects (Migration of the Solaris servers to Linux)a<br>
-                            Responsible for the company’s servers, DMZ clustered servers (LAMT/P), and LAN’s servers
-                            (Samba, Ldap, Mail, Dns .)<br>
-                            Manage Infrastructure, Servers, Network (switches and firewalls), Desktops<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="www.systemat.com" alt="systemat.com" src="/images/companies/systemat.jpg"
-                                width="32px" class="mx-2" />Systemat</h4>
-                        <a href="https://www.systemat.com" target="_blank" class="link">www.systemat.com</a>
-                        <p><b>Linux System Expert</b></p>
-                        <p>Aug 2005 - Feb 2006</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">IT company
-                        </p>
-                        <p>Meet Customers with Sales Team to support them with technical expertise.<br>
-                            Install and Configure Linux solutions for Customers.<br>
-                            Provide Linux Trainings (Basic and Advanced) to Customers and colleagues.<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="www.dell.com" alt="dell.com" src="/images/companies/dell.png" width="32px"
-                                class="mx-2" />Dell</h4>
-                        <a href="https://www.dell.com" target="_blank" class="link">www.dell.com</a>
-                        <p><b>Storage Engineer</b></p>
-                        <p>Aug 2003 - Aug 2005</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">IT company providing infrastructure assets
-                        </p>
-                        <p>Analyse Linux/Unix/Vmware issues and problems for DELL and EMC’s european customers on
-                            Server/Storage/SAN Switch environment.<br>
-                            Work on site to install and configure customer’s systems in large Datacentre<br>
-                            Work on shift for recovery and complex issues (infrastructure,system recovery…)<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="www.vivendi.com" alt="vivendi.com" src="/images/companies/vivendi.jpeg"
-                                width="32px" class="mx-2" />Vivendi Games</h4>
-                        <a href="https://www.vivendi.com/nos-activites/jeux-video/" target="_blank"
-                            class="link">www.vivendi.com/en/activities/video-games/</a>
-                        <p><b>Game debugger and tester</b></p>
-                        <p>Feb 2003 - Aug 2003</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Game producer
-                        </p>
-                        <p>Game debugger (Warcraft 3, Final fight, the Hobbit…)<br>
-                            Game tester<br></p>
-                    </div>
-                </div>
-
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="www.tati.com" alt="tati.com" src="/images/companies/tati.png" width="32px"
-                                class="mx-2" />Tati</h4>
-                        <a href="https:////www.tati.fr" target="_blank" class="link">www.tati.fr</a>
-                        <p><b>Opensystem Lead</b></p>
-                        <p>Apr 2002 - Dec 2002</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Retail Company
-                        </p>
-                        <p>Operation lead for Open Systems infrastructure<br>
-                            Management of the Open system team.<br>
-                            Installation/Configuration and Operations of Servers (LDAP, mail,Samba,DNS,FW,DB2,
-                            VPN,Firewall, IDS..)<br>
-                            Manage Projects such as Migration from Token ring to Ethernet, Install new Shop
-                            infrastructure.<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="www.altran.fr" alt="altran.fr" src="/images/companies/datacep.png" width="32px"
-                                class="mx-2" />Datacep</h4>
-                        <a href="https://www.altran.fr" target="_blank" class="link">www.altran.fr</a>
-                        <p><b>Software Engineer</b></p>
-                        <p>May 2001 - Apr 2002</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">IT consultanty company
-                        </p>
-                        <p>Improvement and evolution of portable Afis system development.<br>
-                            Creation of Afis Protocol system messenger with Specification, Messenger analyse and
-                            conception, Development, Test and documentation.<br>
-                            Correction of a radar chip setting software including errors corrections and validation,
-                            Creation of tests procedures<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="www.sernam.fr" alt="sernam.fr" src="/images/companies/sernam.jpeg" width="32px"
-                                class="mx-2" />Sernam</h4>
-                        <a href="https://www.sernam.fr" target="_blank" class="link">www.sernam.fr</a>
-                        <p><b>Developer</b></p>
-                        <p>Jan 2001 - Apr 2001</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Logistic company
-                        </p>
-                        <p>Java Applet development for truck logistic<br></p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4><img title="www.alstom.fr" alt="alstom.fr" src="/images/companies/alstom.webp" width="32px"
-                                class="mx-2" />Alstom</h4>
-                        <a href="https://www.alstom.fr" target="_blank" class="link">www.alstom.fr</a>
-                        <p><b>Developer</b></p>
-                        <p>Jul 2000 - Dec 2000</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">Industry
-                        </p>
-                        <p>Intranet Website developement (LAMP)<br></p>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <div class="container education-container">
-                <h1 class="text-center m-3">Education</h1>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4>ULP Strasbourg</h4>
-                        <p><b>Degree Computer Science</b></p>
-                        <p>1999 - 2000</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">French University located in Strasbourg
-                        </p>
-                        <p>Degree in computer science specialized in parallel computing.</p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-                        <h4>UFR Besancon</h4>
-                        <p><b>Degree in Mathematics</b></p>
-                        <p>1995 - 1999</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
-                        <p class="quote">French University located in Besancon
-                        </p>
-                        <p>Degree in mathematics specialized in applied mathematics</p>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <div class="container projects-container">
-                <h1 class="text-center m-3">Fun Projects (with my kids)</h1>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>CuriooCity</h4>
-                        <a href="https://play.google.com/store/apps/details?id=city.curioo.explorer" target="_blank" class="link">play</a>
-                        <p class="no-print">
-                            <a href="https://curioo.city/" target="_blank">
-                                <i class="text-dark fa fa-globe" title="CuriooCity webiste"></i>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p class="quote">Card and Caching game 
-                        </p>
-                        <p>Explore, play and discover the world. </p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Box4Fit</h4>
-                        <a href="https://app.box4.fit/" target="_blank" class="link">play</a>
-                        <p class="no-print">
-                            <a href="https://box4.fit/" target="_blank">
-                                <i class="text-dark fa fa-globe" title="Box4fit webiste"></i>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p class="quote">Boxing game 
-                        </p>
-                        <p>Game and Boxing for body fit with style and fun ! </p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Gean</h4>
-                        <a href="https://natmaitre.github.io/gean/" target="_blank" class="link">play</a>
-                        <p class="no-print">
-                            <a href="https://github.com/natmaitre/gean/" target="_blank">
-                                <i class="text-dark fa fa-github" title="Gean Github link"></i>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p class="quote">Game racing car
-                        </p>
-                        <p>Simple car racing game done with my kids. Very simplist but good learning path.</p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Node Red Projects</h4>
-                        <a href="https://flows.nodered.org/search?term=yoctu" target="_blank" class="link">search</a>
-                        <p class="no-print">
-                            <a href="https://github.com/node-red/node-red" target="_blank">
-                                <i class="text-dark fa fa-github" title="Node Red Projects Github link"></i>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p class="quote">Node-red fan. NoCode is the way to go.
-                        </p>
-                        <p>I am using NR in many cases: personnal and professional. Love it. Quick and simple. Give it a
-                            try.
-                            Created few palettes for work.</p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>slotMachine</h4>
-                        <a href="https://lvenier.github.io/slotmy/" target="_blank" class="link">demo</a>
-                        <p class="no-print">
-                            <a href="https://github.com/lvenier/slotmy" target="_blank">
-                                <i class="text-dark fa fa-github" title="slotMachine Github link"></i>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p class="quote">Just for Fun.
-                        </p>
-                        <p>Simple app to demonstrate js coding, socket and chromecast support. Just for the fun of it
-                            with my kids.
-                            Used to have the yoctu services plugged in as well.</p>
-                    </div>
-                </div>
-                <div class="row clearfix layout layout-left">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-print-12 details">
-                        <h4>Yosh</h4>
-                        <a href="https://yoctu.com" target="_blank" class="link">yoctu.com</a>
-                        <p class="no-print">
-                            <a href="https://github.com/yoctu/yosh" target="_blank">
-                                <i class="text-dark fa fa-github" title="Yosh Github link"></i>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-print-12">
-                        <p class="quote">Bash Framework. Do you believe it ?
-                        </p>
-                        <p>full Bash web framework. Used to create quick bash apis or cgi script. Simple and easy.</p>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <hr>
-            <div class="container more-container">
-                <h3>A Little More About Me</h3>
-                <div class="row clearfix">
-                    <div class="col-md-12">
-                        <p>Alongside my interests in IT some of my other interests and hobbies are:</p>
-                        <ul>
-                            <li>Familly :)</li>
-                            <li>Gaming</li>
-                            <li>Working</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
+        <div class="actions">
+          <a class="btn primary" href="mailto:lav@saashup.com">Contact me</a>
+          <a class="btn" href="https://github.com/lvenier" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://saashup.com" target="_blank" rel="noreferrer">SaaShup</a>
+          <a class="btn" href="https://www.youtube.com/lvenier" target="_blank" rel="noreferrer">YouTube</a>
         </div>
-    </main>
-    <footer class="container text-muted text-center">
-        <p> Laurent Venier -
-            <a href="mailto:lav@saashup.com" target="_blank" style="text-decoration:none;">lav@saashup.com</a> -
-            References on request</p>
-    </footer>
-</body>
+      </div>
 
+      <aside class="profile-card" aria-label="Profile summary">
+        <img class="avatar" src="/images/laurent.jpg" alt="Laurent Venier" />
+        <h2>Laurent Venier</h2>
+        <p>IT Manager • Cloud & DevOps • Builder</p>
+        <div class="quick-stats">
+          <div class="stat"><strong>20+</strong><span>years IT</span></div>
+          <div class="stat"><strong>4</strong><span>main projects</span></div>
+          <div class="stat"><strong>100%</strong><span>hands-on</span></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="summary">
+      <div class="container two-col">
+        <div class="card">
+          <h3>Professional profile</h3>
+          <p>
+            I combine operational leadership with hands-on engineering. My work covers cloud and
+            infrastructure architecture, Linux platforms, containers, reverse proxies, monitoring,
+            identity providers, CI/CD pipelines and automation workflows.
+          </p>
+        </div>
+        <div class="card">
+          <h3>What makes me different</h3>
+          <p>
+            I do not only manage systems: I build tools, prototypes and products. My recent work
+            includes web games, Electron applications, geolocation games, custom map tiles,
+            Playwright testing, GitHub Actions and OpenID Connect integrations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured projects</h2>
+          <p>Personal and open-source work showing infrastructure, software, automation and game development.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="card project">
+            <div class="project-icon">🥊</div>
+            <h3>Box4Fit</h3>
+            <p>
+              Webcam-based boxing fitness game using JavaScript, p5.js, ml5.js and Electron.
+              Includes camera detection, scoring, animations, packaging and CI.
+            </p>
+            <a href="https://github.com/lvenier/tfit" target="_blank" rel="noreferrer">View project →</a>
+            <div class="tag-list">
+              <span class="tag">JavaScript</span><span class="tag">p5.js</span><span class="tag">ml5.js</span><span class="tag">Electron</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-icon">🌍</div>
+            <h3>CuriooCity</h3>
+            <p>
+              Mobile geolocation exploration game for kids, with portals, chests, collectible cards,
+              tours, mini-games and real-world discovery mechanics.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Unity</span><span class="tag">Mobile</span><span class="tag">Geolocation</span><span class="tag">Game Design</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-icon">☁️</div>
+            <h3>PaasBox / SaaShup platform work</h3>
+            <p>
+              Mini virtual datacenter and platform management ideas combining Docker, Traefik,
+              NetBox, Grafana, Prometheus, Keycloak, Dex, Node-RED and automation.
+            </p>
+            <a href="https://saashup.com" target="_blank" rel="noreferrer">View SaaShup →</a>
+            <div class="tag-list">
+              <span class="tag">Docker</span><span class="tag">Traefik</span><span class="tag">OIDC</span><span class="tag">Observability</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-icon">🗺️</div>
+            <h3>Curioo Tiles</h3>
+            <p>
+              Custom OpenStreetMap tile generator with themes, health checks, metrics endpoints,
+              frontend editor, automated tests and CI/CD improvements.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Node.js</span><span class="tag">OpenStreetMap</span><span class="tag">Prometheus</span><span class="tag">Playwright</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Core skills</h2>
+          <p>Technologies and domains I use to design, operate and improve platforms and products.</p>
+        </div>
+
+        <div class="grid cards">
+          <div class="card">
+            <h3>Infrastructure</h3>
+            <p>Linux, Debian, networking, reverse proxy, VPN, DNS, SSL/TLS, service operations.</p>
+          </div>
+          <div class="card">
+            <h3>Containers & platform</h3>
+            <p>Docker, Docker Compose, Traefik, NGINX Plus, GitHub Container Registry.</p>
+          </div>
+          <div class="card">
+            <h3>Identity & security</h3>
+            <p>OIDC, OAuth2, Keycloak, Dex, Google/GitHub login, API keys and access control.</p>
+          </div>
+          <div class="card">
+            <h3>Observability</h3>
+            <p>Grafana, Prometheus, metrics endpoints, health checks, logs and dashboards.</p>
+          </div>
+          <div class="card">
+            <h3>Development</h3>
+            <p>JavaScript, Node.js, frontend apps, Electron, APIs, automation scripts.</p>
+          </div>
+          <div class="card">
+            <h3>Testing & CI/CD</h3>
+            <p>GitHub Actions, Playwright, Vitest, coverage, release workflows and artifacts.</p>
+          </div>
+          <div class="card">
+            <h3>Game & creative tech</h3>
+            <p>Unity, p5.js, Three.js, ml5.js, geolocation games and interactive prototypes.</p>
+          </div>
+          <div class="card">
+            <h3>Leadership</h3>
+            <p>IT management, service delivery, operations, team coordination and product thinking.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="skill-cloud">
+            <span class="skill">Debian</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">NGINX Plus</span>
+            <span class="skill">Traefik</span>
+            <span class="skill">Keycloak</span>
+            <span class="skill">Dex</span>
+            <span class="skill">Grafana</span>
+            <span class="skill">Prometheus</span>
+            <span class="skill">Playwright</span>
+            <span class="skill">Vitest</span>
+            <span class="skill">Electron</span>
+            <span class="skill">Unity</span>
+            <span class="skill">p5.js</span>
+            <span class="skill">Three.js</span>
+            <span class="skill">OpenStreetMap</span>
+            <span class="skill">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience focus</h2>
+          <p>A compact CV-style overview. You can extend this with company names and exact dates.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Current focus</div>
+            <div>
+              <h3>Platform engineering, automation and open-source development</h3>
+              <p>
+                Building and improving container platforms, identity integrations, CI/CD workflows,
+                monitoring stacks and developer-facing tools, while maintaining multiple personal projects.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">IT leadership</div>
+            <div>
+              <h3>IT Manager / Service & Operations</h3>
+              <p>
+                Leading operations, coordinating service delivery, improving reliability,
+                supporting teams and aligning technical choices with business needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Engineering background</div>
+            <div>
+              <h3>Systems, network and software engineering</h3>
+              <p>
+                Hands-on experience with Linux systems, networking, containers, automation,
+                web applications, APIs, observability and secure access management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="container">
+        <div class="section-title">
+          <h2>Certifications & badges</h2>
+          <p>Existing certification images are reused from your repository.</p>
+        </div>
+
+        <div class="card">
+          <div class="tag-list">
+            <span class="tag">Scrum</span>
+            <span class="tag">LPI 1</span>
+            <span class="tag">LPI 2</span>
+            <span class="tag">JSNAD</span>
+            <span class="tag">JSNSD</span>
+            <span class="tag">CCNA</span>
+            <span class="tag">ITIL</span>
+            <span class="tag">PRINCE2</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;align-items:center">
+            <img src="/images/badges/scrum.jpg" alt="Scrum" width="64" height="64" />
+            <img src="/images/badges/lpi1.png" alt="LPI 1" width="64" height="64" />
+            <img src="/images/badges/lpi2.png" alt="LPI 2" width="64" height="64" />
+            <img src="/images/badges/jsnad.png" alt="JSNAD" width="64" height="64" />
+            <img src="/images/badges/jsnsd.png" alt="JSNSD" width="64" height="64" />
+            <img src="/images/badges/ccna.png" alt="CCNA" width="64" height="64" />
+            <img src="/images/badges/itil.png" alt="ITIL" width="64" height="64" />
+            <img src="/images/badges/prince2.png" alt="PRINCE2" width="64" height="64" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Open to discussions around platform engineering, automation, infrastructure and creative technical projects.</p>
+        </div>
+
+        <div class="two-col">
+          <a class="card" href="mailto:lav@saashup.com">
+            <h3>Email</h3>
+            <p>lav@saashup.com</p>
+          </a>
+          <a class="card" href="https://github.com/lvenier" target="_blank" rel="noreferrer">
+            <h3>GitHub</h3>
+            <p>github.com/lvenier</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Laurent Venier — Cloud, DevOps, Platform Engineering & Open Source.
+    </div>
+  </footer>
+</body>
 </html>
